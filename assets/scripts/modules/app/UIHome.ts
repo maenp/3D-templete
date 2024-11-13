@@ -3,7 +3,6 @@ import { UIScreen } from "../../frame/core/UIForm";
 import Toast from "../common/Toast";
 import popup from './UITestPopup';
 import UITestScreen from "./UITestScreen";
-import { indexApi } from "../../api";
 
 const { ccclass, property } = _decorator;
 @ccclass('UIHome')
@@ -27,7 +26,7 @@ export default class UIHome extends UIScreen {
                 Toast.popUp('欢迎回来欢迎回来')
                 break;
             case '4':
-                indexApi()
+                Toast.popUp('未完成')
                 break;
 
             default:
