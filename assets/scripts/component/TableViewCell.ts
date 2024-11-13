@@ -14,12 +14,12 @@ export class TableViewCell extends cc.Component {
     protected m_data : any = null;
     protected m_tree : any = null;
 
-    protected m_renders : cc.Renderable2D[] = [];
+    protected m_renders : cc.UIRenderer[] = [];
 
     public __redefineInit()
     {
-        this.m_renders = this.node.getComponentsInChildren(cc.Renderable2D);
-        this.m_renders.forEach(( render : cc.Renderable2D )=>{
+        this.m_renders = this.node.getComponentsInChildren(cc.UIRenderer);
+        this.m_renders.forEach(( render : cc.UIRenderer )=>{
             let rendertemp = render as any;
             if(rendertemp._realRenderFunc == null)
             {
@@ -31,7 +31,7 @@ export class TableViewCell extends cc.Component {
 
     public ___redefineReset()
     {
-        this.m_renders.forEach(( render : cc.Renderable2D )=>{
+        this.m_renders.forEach(( render : cc.UIRenderer )=>{
             let rendertemp = render as any;
             if(rendertemp._realRenderFunc != null)
             {

@@ -14,14 +14,14 @@ interface IDelayRender{
 }
 
 @ccclass('RenderChange')
-export class RenderChange extends cc.Renderable2D {
+export class RenderChange extends cc.UIRenderer {
     private m_renderlist : Array<string> = new Array();
     private m_renderGroup : Map<string, Array<IDelayRender>> = new Map();
 
     onDisable()
     {
-        let renders = this.node.getComponentsInChildren(cc.Renderable2D);
-        renders.forEach(( render : cc.Renderable2D)=>{
+        let renders = this.node.getComponentsInChildren(cc.UIRenderer);
+        renders.forEach(( render : cc.UIRenderer)=>{
             let rendertemp = render as any;
             if(rendertemp._realRenderFunc != null)
             {
@@ -36,7 +36,7 @@ export class RenderChange extends cc.Renderable2D {
         if(!node.activeInHierarchy)return;
 
         let curname = `${prename}$${node.name}`;
-        let render = node.getComponent(cc.Renderable2D);
+        let render = node.getComponent(cc.UIRenderer);
         if(render)
         {
             let arr = this.m_renderGroup.get(curname);

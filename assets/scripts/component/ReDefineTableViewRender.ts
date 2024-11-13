@@ -3,7 +3,7 @@ import { TableViewCell} from "./TableViewCell"
 const { ccclass, property} = cc._decorator;
 
 @ccclass('ReDefineTableViewRender')
-export class ReDefineTableViewRender extends cc.Renderable2D {
+export class ReDefineTableViewRender extends cc.UIRenderer {
     private m_tableView : any = null;
     
     onEnable()
