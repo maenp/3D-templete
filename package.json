@@ -5,19 +5,9 @@
     "version": "3.7.0"
   },
   "scripts": {
-    "dev": "node documents/server/html5_server.js",
-    "build": "node documents/package/build.js",
-    "commit": "fep prepub -d -t documents/package/test -p documents/package/prod"
   },
   "dependencies": {},
   "uuid": "14db02f7-c81a-44b3-bb1c-a0cba84a347a",
   "devDependencies": {
-    "browserslist": "^4.21.4",
-    "caniuse-lite": "^1.0.30001441",
-    "express": "^4.18.2",
-    "gulp": "^4.0.2",
-    "gulp-file-inline": "^2.2.3",
-    "gulp-htmlmin": "^5.0.1",
-    "http-proxy-middleware": "^2.0.6"
   }
 }

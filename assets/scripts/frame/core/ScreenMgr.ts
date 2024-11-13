@@ -1,6 +1,5 @@
 import UIManager from "./UIManager";
 import {warn} from 'cc';
-import MMBridge from "../../utils/MMBridge";
 
 const TAG = "ScreenMgr";
 
@@ -40,7 +39,7 @@ class ScreenMgr {
 	public async back(params?: any) {
 		if (this._screens.length <= 1) {
 			// warn(TAG, "已经是最后一个场景了, 无处可退");
-			MMBridge.close();
+			// todo: 退出游戏
 			return false;
 		}
 		let curScreen = this._screens.pop();
