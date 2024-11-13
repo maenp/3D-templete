@@ -1,0 +1,61 @@
+{
+	"ec": 0,
+	"em": "ok",
+	"millisecond": 1663573795324,
+	"data": {
+		"status":1,
+		"rewards2":[],
+		"rewards":[
+			{
+				"id": "2001",
+				"name": "5元会员优惠券5元会员优惠券",
+				"desc": null,
+				"icon": "https://s.momocdn.com/s1/u/ihgiijihe/svip10levelup/gift1.png",
+				"bizType": "vipCouponNew",
+				"num": 1,
+				"prob": null,
+				"order": null
+			},
+			{
+				"id": "2001",
+				"name": "5元会员优惠券5元会员优惠券",
+				"desc": null,
+				"icon": "https://s.momocdn.com/s1/u/ihgiijihe/svip10levelup/gift1.png",
+				"bizType": "vipCouponNew",
+				"num": 1,
+				"prob": null,
+				"order": null
+			},
+			{
+				"id": "2001",
+				"name": "5元会员优惠券5元会员优惠券",
+				"desc": null,
+				"icon": "https://s.momocdn.com/s1/u/ihgiijihe/svip10levelup/gift1.png",
+				"bizType": "vipCouponNew",
+				"num": 1,
+				"prob": null,
+				"order": null
+			},
+			{
+				"id": "2001",
+				"name": "5元会员优惠券5元会员优惠券5元会员优惠券5元会员优惠券",
+				"desc": null,
+				"icon": "https://s.momocdn.com/s1/u/ihgiijihe/svip10levelup/gift1.png",
+				"bizType": "vipCouponNew",
+				"num": 1,
+				"prob": null,
+				"order": null
+			},
+			{
+				"id": "2001",
+				"name": "5元会员优惠券5元会员优惠券5元会员优惠券5元会员优惠券",
+				"desc": null,
+				"icon": "https://s.momocdn.com/s1/u/ihgiijihe/svip10levelup/gift1.png",
+				"bizType": "vipCouponNew",
+				"num": 1,
+				"prob": null,
+				"order": null
+			}
+		] 
+	}
+}

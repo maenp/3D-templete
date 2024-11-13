@@ -1,0 +1,211 @@
+{
+  "ec": 0,
+  "em": "ok",
+  "millisecond": 1663748772274,
+  "data": [
+    {
+      "uniqueId": null,
+      "subModuleId": "100010",
+      "moduleName": "至尊",
+      "productId": "com.wemomo.momoappdemo1.svip289",
+      "paySource": "97",
+      "title": null,
+      "subTitle": null,
+      "productIcon": null,
+      "bizType": "vip",
+      "actualPrice": 258,
+      "originalPrice": 360,
+      "discount": "7.2折",
+      "reward": [
+        {
+          "id": null,
+          "name": "1年SVIP",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/svip_icon.png",
+          "bizType": "svip",
+          "num": null,
+          "prob": false,
+          "order": 1
+        },
+        {
+          "id": "com.wemomo.momoappdemo1.svip290-redpacket-ic6YzEf8X2N039abFXjwDmbQHZphMAJB",
+          "name": "SVIP年卡",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/svip_icon.png",
+          "bizType": "vipProduct",
+          "num": 1,
+          "prob": true,
+          "order": 2
+        },
+        {
+          "id": "80",
+          "name": "80元红包",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/red_icon.png",
+          "bizType": "redPacket",
+          "num": 1,
+          "prob": true,
+          "order": 3
+        },
+        {
+          "id": "红包雨8次",
+          "name": "红包雨8次",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/red_rain_icon.png",
+          "bizType": "lotteryCount",
+          "num": 8,
+          "prob": false,
+          "order": 4
+        },
+        {
+          "id": "200",
+          "name": "成长值200点",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/grow_icon.png",
+          "bizType": "growScore",
+          "num": 1,
+          "prob": false,
+          "order": 5
+        }
+      ],
+      "limit": 0,
+      "count": 0
+    },
+    {
+      "uniqueId": null,
+      "subModuleId": "100020",
+      "moduleName": "至尊",
+      "productId": "com.wemomo.momoappdemo1.svip297",
+      "paySource": "97",
+      "title": null,
+      "subTitle": null,
+      "productIcon": null,
+      "bizType": "vip",
+      "actualPrice": 168,
+      "originalPrice": 180,
+      "discount": "9.3折",
+      "reward": [
+        {
+          "id": null,
+          "name": "1年SVIP",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/svip_icon.png",
+          "bizType": "svip",
+          "num": null,
+          "prob": false,
+          "order": 1
+        },
+        {
+          "id": "com.wemomo.momoappdemo1.svip04-vipDay-92mnf2rQcFKe29xl35z72s308sor20",
+          "name": "SVIP半年卡",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/svip_icon.png",
+          "bizType": "vipProduct",
+          "num": 1,
+          "prob": true,
+          "order": 2
+        },
+        {
+          "id": "30",
+          "name": "30元红包",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/red_icon.png",
+          "bizType": "redPacket",
+          "num": 1,
+          "prob": true,
+          "order": 3
+        },
+        {
+          "id": "红包雨5次",
+          "name": "红包雨5次",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/red_rain_icon.png",
+          "bizType": "lotteryCount",
+          "num": 5,
+          "prob": false,
+          "order": 4
+        },
+        {
+          "id": "成长值100点",
+          "name": "成长值100点",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/grow_icon.png",
+          "bizType": "growScore",
+          "num": 100,
+          "prob": false,
+          "order": 5
+        }
+      ],
+      "limit": 0,
+      "count": 0
+    },
+    {
+      "uniqueId": null,
+      "subModuleId": "100030",
+      "moduleName": "至尊",
+      "productId": "com.wemomo.momoappdemo1.svip228",
+      "paySource": "97",
+      "title": null,
+      "subTitle": null,
+      "productIcon": null,
+      "bizType": "vip",
+      "actualPrice": 78,
+      "originalPrice": 90,
+      "discount": "7.5折",
+      "reward": [
+        {
+          "id": null,
+          "name": "1年SVIP",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/svip_icon.png",
+          "bizType": "svip",
+          "num": null,
+          "prob": false,
+          "order": 1
+        },
+        {
+          "id": "com.wemomo.momoappdemo1.svip04-vipDay-92mnf2rQcFKe29xl35z72s308sor20",
+          "name": "SVIP季卡",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/svip_icon.png",
+          "bizType": "vipProduct",
+          "num": 1,
+          "prob": true,
+          "order": 2
+        },
+        {
+          "id": "15",
+          "name": "15元红包",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/red_icon.png",
+          "bizType": "redPacket",
+          "num": 1,
+          "prob": true,
+          "order": 3
+        },
+        {
+          "id": "红包雨2次",
+          "name": "红包雨2次",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/red_rain_icon.png",
+          "bizType": "lotteryCount",
+          "num": 2,
+          "prob": false,
+          "order": 4
+        },
+        {
+          "id": "com.momoapp.grow_multi_vip_prop01",
+          "name": "成长加倍卡7天",
+          "desc": null,
+          "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/red_rain/grow_card.png",
+          "bizType": "growPropMulti",
+          "num": 3,
+          "prob": false,
+          "order": 5
+        }
+      ],
+      "limit": 0,
+      "count": 0
+    }
+  ]
+}

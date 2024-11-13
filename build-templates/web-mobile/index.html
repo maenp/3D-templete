@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Game</title>
+  <base href="_base_herf_">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="screen-orientation" content="portrait" />
+
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+<body>
+  <div id="GameDiv" cc_exact_fit_screen="true">
+      <div id="Cocos3dGameContainer">
+        <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
+      </div>
+    </div>
+  
+<!-- Polyfills bundle. -->
+<script src="src/polyfills.bundle.js?_bid=_bid_" charset="utf-8"> </script>
+
+<!-- SystemJS support. -->
+<script src="src/system.bundle.js?_bid=_bid_" charset="utf-8"> </script>
+
+<!-- Import map -->
+<script src="src/import-map.json?_bid=_bid_" type="systemjs-importmap" charset="utf-8"> </script>
+
+<script>
+    //bid
+    window.AppBid = "_bid_";
+
+    // 修改System.resolve 请求js增加bid
+    // var _resolve = System.constructor.prototype.resolve;
+    // console.log(_resolve);
+    // System.constructor.prototype.resolve = function (id, parentUrl) {
+    //   var str =  _resolve(id, parentUrl);
+    //   if(str.indexOf('virtual') === -1){
+    //     str += '?_bid=' + window.AppBid
+    //   }
+    //   console.log([str, id, parentUrl]);
+    //   return str
+    // };
+
+    // var _instantiate = System.constructor.prototype.instantiate;
+    // console.log(_instantiate);
+    // System.constructor.prototype.instantiate = function (url, parentUrl) {
+    //   console.log([url, parentUrl]);
+    //   return _instantiate.call(System, url, parentUrl);
+    // };
+
+    var createScript = System.constructor.prototype.createScript;
+    System.constructor.prototype.createScript = function (url) {
+      url += '?_bid=' + window.AppBid;
+      return createScript(url);
+    };
+
+    System.import('index').catch(function(err) { console.error(err); })
+</script>
+
+</body>
+</html>

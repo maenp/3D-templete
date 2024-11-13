@@ -1,0 +1,54 @@
+{
+  "name": "frameSynchGame",
+  "platform": "web-mobile",
+  "buildPath": "project://build",
+  "debug": false,
+  "md5Cache": false,
+  "skipCompressTexture": false,
+  "sourceMaps": false,
+  "replaceSplashScreen": true,
+  "mainBundleCompressionType": "merge_all_json",
+  "mainBundleIsRemote": false,
+  "mergeStartScene": false,
+  "experimentalEraseModules": false,
+  "compressTexture": true,
+  "packAutoAtlas": true,
+  "startScene": "dbe00cf2-c455-461e-85c2-6d975dce9cd9",
+  "scenes": [
+    {
+      "url": "db://assets/launch/launch.scene",
+      "uuid": "dbe00cf2-c455-461e-85c2-6d975dce9cd9",
+      "inBundle": false
+    },
+    {
+      "url": "db://assets/modules/app/appScene.scene",
+      "uuid": "e2de9afc-5ced-4f99-a2ac-7911e36a63b6",
+      "inBundle": true
+    },
+    {
+      "url": "db://assets/modules/test/scene.scene",
+      "uuid": "1758cbf6-22b9-4430-b8b6-3d9a11065d15",
+      "inBundle": true
+    }
+  ],
+  "outputName": "web-mobile",
+  "packages": {
+    "web-mobile": {
+      "orientation": "auto",
+      "__version__": "1.0.1"
+    },
+    "cocos-service": {
+      "configID": "e5ab36",
+      "services": [],
+      "__version__": "3.0.4"
+    },
+    "mysetting": {
+      "__version__": "1.0.0"
+    }
+  },
+  "polyfills": {
+    "asyncFunctions": true
+  },
+  "useBuiltinServer": false,
+  "web-mobile": []
+}

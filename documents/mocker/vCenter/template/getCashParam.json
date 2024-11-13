@@ -1,0 +1,16 @@
+{
+  "ec": 0,
+  "em": "ok",
+  "millisecond": 1646303249694,
+  "data": {
+    "business": "vip_all",
+    "params": {
+      "money": 218,
+      "purpose": 2,
+      "title": "买12个月SVIP",
+      "sign": "B5564F4DAC493E7E16490BE22C3EB89B",
+      "product_id": "com.wemomo.momoappdemo1.svip229",
+      "remoteid": "54000001"
+    }
+  }
+}

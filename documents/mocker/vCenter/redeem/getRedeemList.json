@@ -1,0 +1,47 @@
+{
+	"ec": 0,
+	"em": "ok",
+	"millisecond": 1661400157452,
+	"data": [
+		{
+			"id": "1000",
+			"limit": 0,
+			"desc": "10元",
+			"status": 2,
+			"order": 1,
+			"finishCount": 2000,
+			"targetCount": 1000,
+			"conditionList": []
+		},
+		{
+			"id": "1001",
+			"limit": 0,
+			"desc": "20元",
+			"status": 1,
+			"order": 1,
+			"finishCount": 2000,
+			"targetCount": 2000,
+			"conditionList": []
+		},
+		{
+			"id": "1002",
+			"limit": 0,
+			"desc": "10元",
+			"status": 1,
+			"order": 1,
+			"finishCount": 1000,
+			"targetCount": 2000,
+			"conditionList": []
+		},
+		{
+			"id": "1003",
+			"limit": 0,
+			"desc": "10元",
+			"status": 1,
+			"order": 1,
+			"finishCount": 1000,
+			"targetCount": 2000,
+			"conditionList": []
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"ec": 0,
+	"em": "ok",
+	"millisecond": 1658473402073,
+	"data": {
+		"rankInfos": [
+			{
+				"rankInfo":{
+					"id":1,
+					"rank":1,
+					"score":9999
+				},
+				"userInfo":{
+					"name":"123"
+				}
+			},
+			{
+				"rankInfo":{
+					"id":1,
+					"rank":2,
+					"score":999999
+				},
+				"userInfo":{
+					"name":"123"
+				}
+			},
+			{
+				"rankInfo":{
+					"id":1,
+					"rank":3,
+					"score":99999999999
+				},
+				"userInfo":{
+					"name":"123"
+				}
+			}
+		]
+	}
+}

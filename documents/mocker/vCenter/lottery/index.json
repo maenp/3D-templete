@@ -1,0 +1,257 @@
+{
+	"ec": 0,
+	"em": "ok",
+	"millisecond": 1661248878838,
+	"data": {
+		"momoid": "892750860",
+		"remainCount": 1,
+		"status": 1,
+		"luckyTime":0,
+		"luckyLimit": 50,
+		"curlLuckyCount": 10,
+		"marqueeInfos": [
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "新会员日气泡（1天）、20点成长加速包（3天）、新会员日气泡（1天）、会员补签卡、新会员日气泡（1天）"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "会员补签卡、会员补签卡、20点成长加速包（3天）、会员补签卡、会员补签卡"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "红包0.6元、会员补签卡、新会员日气泡（1天）、新会员日气泡（5天）、20点成长加速包（3天）"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "新会员日气泡（1天）、新会员日气泡（1天）、会员补签卡、新会员日气泡（1天）、会员补签卡"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "新会员日气泡（5天）、新会员日气泡（5天）、会员补签卡、会员补签卡、新会员日气泡（5天）"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "新会员日气泡（1天）、20点成长加速包（3天）、20点成长加速包（3天）、新会员日气泡（5天）、新会员日气泡（5天）"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "20点成长加速包（3天）、20点成长加速包（3天）、新会员日气泡（1天）、会员补签卡、20点成长加速包（3天）"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "新会员日气泡（1天）、电风扇礼物（9个）、20点成长加速包（3天）、会员补签卡、新会员日气泡（5天）"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "会员补签卡、会员补签卡、会员补签卡、新会员日气泡（1天）、会员补签卡"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "20点成长加速包（3天）、新会员日气泡（5天）、新会员日气泡（5天）、20点成长加速包（3天）、红包0.6元"
+			},
+			{
+				"momoid": "663899072",
+				"name": "5a6Y5pa5Mzc=",
+				"role": null,
+				"award": "红包0.6元"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "会员补签卡"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "新会员日气泡（1天）"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "红包0.6元"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "红包0.6元"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "会员补签卡"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "会员补签卡"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "新会员日气泡（1天）"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "会员补签卡"
+			},
+			{
+				"momoid": "19090079",
+				"name": "Z2YgQfCfmJjwn5iN8J+YgPCfmJLwn5iC8J+YrPCfp5Dwn5mD",
+				"role": null,
+				"award": "20点成长加速包（3天）"
+			}
+		],
+		"rewardList": [
+			{
+				"id": "1001",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/red_s.png",
+				"name": "红包0.6元",
+				"bizType": "redPacket",
+				"role": 0,
+				"order": 1,
+				"desc": "精选",
+				"count": 1
+			},
+			{
+				"id": "1002",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/super_roceket_bubble.gif",
+				"name": "赛博火箭气泡（93天）",
+				"bizType": "bubble",
+				"role": 0,
+				"order": 2,
+				"desc": "典藏",
+				"count": 93
+			},
+			{
+				"id": "1003",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/red_b.png",
+				"name": "红包299元",
+				"bizType": "redPacket",
+				"role": 0,
+				"order": 3,
+				"desc": "大奖",
+				"count": 1
+			},
+			{
+				"id": "1004",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/svip.png",
+				"name": "SVIP年卡",
+				"bizType": "vipProduct",
+				"role": 0,
+				"order": 4,
+				"desc": "大奖",
+				"count": 1
+			},
+			{
+				"id": "1005",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/electric_fan.png",
+				"name": "电风扇礼物9个电风扇礼物9个",
+				"bizType": "gift",
+				"role": 0,
+				"order": 5,
+				"desc": "精选",
+				"count": 9
+			},
+			{
+				"id": "1006",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/svip.png",
+				"name": "SVIP月卡",
+				"bizType": "vipProduct",
+				"role": 0,
+				"order": 6,
+				"desc": "精选",
+				"count": 1
+			},
+			{
+				"id": "1007",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/vipday_bubble.gif",
+				"name": "新会员日气泡（1天）",
+				"bizType": "bubble",
+				"role": 0,
+				"order": 7,
+				"desc": "普通",
+				"count": 1
+			},
+			{
+				"id": "1008",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/summer_bubble_high.png",
+				"name": "夏日泡沫礼物（1个）",
+				"bizType": "gift",
+				"role": 0,
+				"order": 8,
+				"desc": "大奖",
+				"count": 1
+			},
+			{
+				"id": "1009",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/cyber_nameplate.png",
+				"name": "赛博火箭铭牌（3个月）",
+				"bizType": "vipLabel",
+				"role": 0,
+				"order": 9,
+				"desc": "典藏",
+				"count": 93
+			},
+			{
+				"id": "1010",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/vipday_bubble.gif",
+				"name": "新会员日气泡（5天）",
+				"bizType": "bubble",
+				"role": 0,
+				"order": 10,
+				"desc": "精选",
+				"count": 5
+			},
+			{
+				"id": "1011",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/sign.png",
+				"name": "会员补签卡",
+				"bizType": "signCard",
+				"role": 0,
+				"order": 11,
+				"desc": "普通",
+				"count": 1
+			},
+			{
+				"id": "1012",
+				"icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/vipday/icon/grow_speed.png",
+				"name": "20点成长加速包（3天）",
+				"bizType": "growPropSpeed",
+				"role": 0,
+				"order": 12,
+				"desc": "普通",
+				"count": 3
+			}
+		]
+	}
+}

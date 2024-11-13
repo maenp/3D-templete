@@ -1,0 +1,21 @@
+{
+	"ec": 0,
+	"em": "ok",
+	"millisecond": 1660912111324,
+	"data": {
+		"subModuleId": "100002",
+		"activityId": "vip_day2",
+		"uniqueId": "1103",
+		"productId": "116",
+		"propId": "20001341",
+		"orderId": "20220819202831317022000000860",
+		"originalPrice": 999,
+		"actualPrice": 999,
+		"bizType": "vipLabel",
+		"num": 372,
+		"discount": 100,
+		"remoteId": "892750860",
+		"title": "3天铭牌",
+		"mobiCount": 31
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"bid": 1003222,
+	"versionX": "1.x",
+	"isMajorUpdate": false,
+	"unziphtml": false,
+	"frequency": 1,
+	"expired": 1095,
+	"packDir": "documents/package/prod",
+	"sw": true
+}

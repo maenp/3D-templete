@@ -1,0 +1,23 @@
+{
+  "ec": 0,
+  "em": "ok",
+  "millisecond": 1652600324023,
+  "data": [
+    {
+      "dressId": "100080",
+      "name": "活动气泡",
+      "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/梦幻之恋/梦幻之恋预览图2.gif",
+      "dressType": "bubble",
+      "dressStatus": 0,
+      "versionCode": "1_1_1"
+    },
+    {
+      "dressId": "98",
+      "name": "活动铭牌",
+      "icon": "https://s.momocdn.com/s1/u/bdaahjbjc/2022/vip/梦幻之恋/女-预览-小.png",
+      "dressType": "vipLabel",
+      "dressStatus": 2,
+      "versionCode": ""
+    }
+  ]
+}
