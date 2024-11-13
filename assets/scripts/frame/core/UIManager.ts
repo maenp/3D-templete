@@ -1,7 +1,7 @@
 import * as cc from 'cc';
 import AdapterMgr, { AdapterType } from "./AdapterMgr";
 import ModalMgr from "./ModalMgr";
-import { ResLoader } from "./ResLoader";
+import resload from "./ResLoader";
 import { FormType } from "./SysDefine";
 import UIBase from "./UIBase";
 import { UIWindow } from "./UIForm";
@@ -15,9 +15,6 @@ export default class UIManager {
 	private _allForms: { [key: string]: UIBase } = cc.js.createMap();    // 所有已经挂载的窗体, 可能没有显示
 	private _loadingForm: { [key: string]: ((value: UIBase) => void)[] } = cc.js.createMap();    // 正在加载的form 
 	private _showingForms: { [key: string]: UIBase } = cc.js.createMap();    // 正在显示的窗体
-
-
-	public resload: ResLoader = new ResLoader();
 
 	private static instance: UIManager = null;
 	public static get ins(){
@@ -37,7 +34,7 @@ export default class UIManager {
 				this.instance._ndTips = Root.getChildByName('UI_TIPS');
 			}
 			cc.director.once(cc.Director.EVENT_BEFORE_SCENE_LAUNCH, () => {
-				this.instance.resload.releaseAll();
+				resload.releaseAll();
 				this.instance = null;
 			});
 		}
@@ -129,7 +126,7 @@ export default class UIManager {
 		});
 	}
 	private async _doLoadUIForm(prefabPath: string) {
-		let prefab = await this.resload.loadPrefabSync(prefabPath);
+		let prefab = await resload.loadPrefabSync(prefabPath);
 		const node = cc.instantiate(prefab);
 		let com = node.getComponent(UIBase);
 		if (!com) {
@@ -176,7 +173,7 @@ export default class UIManager {
 
 		AdapterMgr.inst.adapteByType(AdapterType.StretchHeight | AdapterType.StretchWidth, com.node);
 	}
-	async enterToPopup(path){
+	async enterToPopup(path:string){
 		let com = this._allForms[path] as UIWindow;
 		if (!com) return;
 		this._windows.push(com);

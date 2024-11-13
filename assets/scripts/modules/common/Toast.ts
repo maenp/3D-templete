@@ -1,6 +1,7 @@
 import * as cc from 'cc';
 import { FormType } from "../../frame/core/SysDefine";
 import UIManager from "../../frame/core/UIManager";
+import resload from "../../frame/core/ResLoader";
 const { ccclass, property } = cc._decorator;
 
 @ccclass('Toast')
@@ -8,7 +9,7 @@ export default class Toast extends cc.Component {
 	public static prefabPath = "common#prefabs/Toast";
 	public formType: FormType = 3;
 	static async popUp(str: string){
-		let prefab = await UIManager.ins.resload.loadPrefabSync(Toast.prefabPath);
+		let prefab = await resload.loadPrefabSync(Toast.prefabPath);
 		let node = cc.instantiate(prefab);
 		let labelNode = node.getChildByName("Label");
 		let lab = labelNode.getComponent(cc.Label);

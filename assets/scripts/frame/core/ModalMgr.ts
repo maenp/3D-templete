@@ -1,5 +1,5 @@
 import { UIWindow } from "./UIForm";
-import UIManager from "./UIManager";
+import resload from "./ResLoader";
 import { instantiate, find, Prefab, Node, NodeEventType, Sprite, tween, UIOpacity, Color, log } from 'cc';
 import AdapterMgr, { AdapterType } from "./AdapterMgr";
 /**
@@ -63,7 +63,7 @@ export default class ModalMgr {
 	}
 	loadModel(){
 		return new Promise<void>((resolve, reject) => {
-			UIManager.ins.resload.loadPrefab('common#prefabs/Model', (err, Prefab: Prefab) => {
+			resload.loadPrefab('common#prefabs/Model', (err, Prefab: Prefab) => {
 				if (!err && Prefab) {
 					const node = instantiate(Prefab);
 					find(ModalMgr.popupRoot).insertChild(node, 0);
