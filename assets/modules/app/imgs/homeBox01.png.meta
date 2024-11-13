@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.25",
+  "ver": "1.0.27",
   "importer": "image",
   "imported": true,
   "uuid": "81463105-a122-49b2-b4ae-14e90b56426e",
@@ -117,7 +117,7 @@
           ]
         }
       },
-      "ver": "1.0.11",
+      "ver": "1.0.12",
       "imported": true,
       "files": [
         ".json"
@@ -128,7 +128,7 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "81463105-a122-49b2-b4ae-14e90b56426e@f9941",
+    "redirect": "81463105-a122-49b2-b4ae-14e90b56426e@6c48a",
     "fixAlphaTransparencyArtifacts": false
   }
 }

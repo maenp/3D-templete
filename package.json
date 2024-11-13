@@ -2,12 +2,10 @@
   "name": "game-frame",
   "version": "3.6.0",
   "creator": {
-    "version": "3.7.0"
+    "version": "3.8.4"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {},
   "uuid": "14db02f7-c81a-44b3-bb1c-a0cba84a347a",
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

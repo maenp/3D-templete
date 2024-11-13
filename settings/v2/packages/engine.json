@@ -1,11 +1,8 @@
 {
-  "__version__": "1.0.7",
+  "__version__": "1.0.10",
   "modules": {
     "cache": {
       "base": {
-        "_value": true
-      },
-      "graphcis": {
         "_value": true
       },
       "gfx-webgl": {
@@ -106,8 +103,11 @@
       "marionette": {
         "_value": false
       },
-      "custom-pipeline": {
-        "_value": false
+      "graphics": {
+        "_value": true
+      },
+      "render-pipeline": {
+        "_option": "legacy-pipeline"
       }
     },
     "flags": {},
@@ -117,6 +117,7 @@
       "base",
       "gfx-webgl",
       "gfx-webgl2",
+      "legacy-pipeline",
       "light-probe",
       "primitive",
       "profiler",
