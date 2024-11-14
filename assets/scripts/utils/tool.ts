@@ -1,5 +1,4 @@
 import * as cc from 'cc';
-import { HOST, TEST_HOST } from "../config";
 
 /**
  * 在一个数组中随机获取一个元素
@@ -74,17 +73,4 @@ export function getStorage(key:string,type:'st'|'obj'='st'){
 }
 export function clearStorage(){
     cc.sys.localStorage.clear();
-}
-
-export function getEnvType(){
-	const {
-        hostname
-    } = window.location;
-	if (hostname === HOST) {
-        return 0;
-    }
-	if (hostname === TEST_HOST) {
-        return 1;
-    }
-	return 'dev'
 }

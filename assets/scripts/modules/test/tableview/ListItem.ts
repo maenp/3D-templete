@@ -7,12 +7,11 @@
  */
 import * as cc from 'cc';
 import { TableViewCell } from "../../../component";
-import { ResLoader } from "../../../frame/core";
+import resload from "../../../frame/core/ResLoader";
 const { ccclass, property } = cc._decorator;
 
 @ccclass('ListItem')
 export class ListItem extends TableViewCell {
-    private _resload: ResLoader = new ResLoader();
 
     @property(cc.Sprite)
     private m_icon : cc.Sprite = null!;
@@ -33,7 +32,7 @@ export class ListItem extends TableViewCell {
         this.m_num.string = `${cellData.num}/${cellData.total}`;
     }
     public updateSprite(sp: cc.Sprite | cc.Mask, path: string) {
-        this._resload.loadSpriteFrame(path, (err, frame: cc.SpriteFrame) => {
+        resload.loadSpriteFrame(path, (err, frame: cc.SpriteFrame) => {
             if (sp && cc.isValid(sp) && cc.isValid(sp.node)) {
                 sp.spriteFrame = frame;
             }

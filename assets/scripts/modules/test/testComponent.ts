@@ -1,10 +1,9 @@
 import { _decorator, Component, Node, instantiate } from 'cc';
-import { ResLoader } from "../../frame/core";
+import resload from "../../frame/core/ResLoader";
 const { ccclass, property } = _decorator;
 
 @ccclass('testComponent')
 export class testComponent extends Component {
-    private _resload: ResLoader = new ResLoader();
 
     start() {
 
@@ -12,7 +11,7 @@ export class testComponent extends Component {
     handleStartGame() {
     }
     handleBtn() {
-        this._resload.loadPrefab('test#popup',(err,Prefab)=>{
+        resload.loadPrefab('test#popup',(err,Prefab)=>{
             const node = instantiate(Prefab)
             this.node.addChild(node)
         })

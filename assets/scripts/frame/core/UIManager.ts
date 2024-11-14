@@ -3,7 +3,7 @@ import AdapterMgr, { AdapterType } from "./AdapterMgr";
 import ModalMgr from "./ModalMgr";
 import resload from "./ResLoader";
 import { FormType } from "./SysDefine";
-import UIBase from "./UIBase";
+import type UIBase from "./UIBase";
 import { UIWindow } from "./UIForm";
 
 export default class UIManager {
@@ -128,7 +128,7 @@ export default class UIManager {
 	private async _doLoadUIForm(prefabPath: string) {
 		let prefab = await resload.loadPrefabSync(prefabPath);
 		const node = cc.instantiate(prefab);
-		let com = node.getComponent(UIBase);
+		let com = node.getComponent('UIBase') as UIBase;
 		if (!com) {
 			cc.warn(`${prefabPath} 结点没有绑定UIBase`);
 			return null;
