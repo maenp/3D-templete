@@ -25,9 +25,17 @@ export class ResItem {
         this.m_refCount++;
     }
 
-    public decRef(){
+    public decRef(force : boolean = false){
+        if (this.m_refCount <= 0) {
+            cc.warn(`资源重复释放: ${this.m_path}`);
+            return;
+        }
+
         this.m_refCount--;
-        if(this.m_refCount <= 0){
+        
+        if(force){
+            this.destroy();
+        }else if(this.m_refCount <= 0){
             this.destroy();
         }
     }
@@ -137,49 +145,76 @@ export class BaseLoader{
         }
     }
     // 加载多个bundle
-    public static loadBundleArray( names : string[], onComplete : LoadBundleArrayAssetCompleteFunc, onProgress ?: LoadBundleAssetProcessFunc){
-        let size = names.length;
-        let count = size;
-        let isDone = false;
+    public static loadBundleArray(
+        names : string[], 
+        onComplete : LoadBundleArrayAssetCompleteFunc, 
+        onProgress ?: LoadBundleAssetProcessFunc
+    ){
+        const bundleNames = [...new Set(names)];
 
-        let bundles : Map<string,BundleAsset> = new Map();
-        let check_done = ( err : Error | null, url : string, bundle : BundleAsset | null)=>{
-            if(isDone) return;
-            if(!err && bundle != null){
-                count --;
-                if(count <= 0){
-                    isDone = true;
-                    bundles.set(url, bundle);
-                    onComplete(null, bundles );
-                }
-            }else{
-                isDone = true;
-                onComplete(err, null);
-            }
+        if (bundleNames.length === 0) {
+            onProgress?.(1);
+            onComplete(null, new Map());
+            return;
         }
 
-        let filePercents : Map<string, number> = new Map();
-        let onePercent = 1/size;
-        let updatePorcess = ( bundleUrl : string, percent : number)=>{
-            if(onProgress != null){
-                filePercents.set(bundleUrl, percent);
-                let allpercent = 0;
-                filePercents.forEach(( p : number)=>{
-                    allpercent += onePercent*p;
-                })
-                onProgress(allpercent);
-            }
-        }
+        const bundles = new Map<string, BundleAsset>();
+        const progresses = new Map<string, number>();
+        let remaining = bundleNames.length;
+        let finished = false;
 
-        for(let i = 0; i < size; i++){
-            let bundleUrl = names[i]
-            filePercents.set(bundleUrl, 0);
-            this.loadBundle(bundleUrl, ( err : Error | null, bundle)=>{
-                check_done(err, bundleUrl, bundle);
-            }, (percent : number)=>{
-                updatePorcess(bundleUrl, percent);
-            })
-        }
+        const reportProgress = () => {
+            if (!onProgress) return;
+
+            let total = 0;
+            progresses.forEach((percent) => {
+                total += percent;
+            });
+
+            onProgress(total / bundleNames.length);
+        };
+
+        bundleNames.forEach((bundleName) => {
+            progresses.set(bundleName, 0);
+
+            this.loadBundle(
+                bundleName,
+                (err, bundle) => {
+                    if (finished) return;
+
+                    if (err || !bundle) {
+                        finished = true;
+                        onComplete(
+                            err ?? new Error(`Load bundle failed: ${bundleName}`),
+                            null,
+                        );
+                        return;
+                    }
+
+                    // 每个 Bundle 完成时立刻存入
+                    bundles.set(bundleName, bundle);
+                    progresses.set(bundleName, 1);
+                    remaining--;
+
+                    reportProgress();
+
+                    if (remaining === 0) {
+                        finished = true;
+                        onProgress?.(1);
+                        onComplete(null, bundles);
+                    }
+                },
+                (percent) => {
+                    if (finished) return;
+
+                    progresses.set(
+                        bundleName,
+                        Math.max(0, Math.min(1, percent)),
+                    );
+                    reportProgress();
+                },
+            );
+        });
     }
 
     // 加载bundle
@@ -237,7 +272,7 @@ export class BaseLoader{
     // 释放所有asset
     public releaseAll(){
         this.m_loadedAssets.forEach(( asset : NormalAsset)=>{
-            asset.decRef();
+            asset.decRef(true);
         })
         this.m_loadedAssets.clear();
     }

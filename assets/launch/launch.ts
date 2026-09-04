@@ -1,5 +1,5 @@
 import * as cc from 'cc';
-import { BaseLoader, BundleAsset } from "./BaseLoader";
+import { BaseLoader } from "./BaseLoader";
 const { ccclass, property } = cc._decorator;
 
 @ccclass('Lauch')
@@ -22,38 +22,61 @@ export class Lauch extends cc.Component {
     launchGame() {
         this.m_loadingBar.progress = 0;
         this.m_lblProcess.string = `加载bundle资源中 0%`
+        BaseLoader.loadBundleArray(
+            ["common", "app", "scripts"],
+            (err, bundles) => {
+                if (err || !bundles) {
+                    cc.error("启动资源加载失败", err);
 
-        BaseLoader.loadBundleArray(["common","app","scripts"], (err: Error | null, bundles: Map<string, BundleAsset> | null) => {
-            if (bundles) {
+                    this.m_loadingBar.progress = 0;
+                    this.m_lblProcess.string = "资源加载失败，请重试";
+                    return;
+                }
+
                 bundles.forEach((bundle) => {
                     bundle.setGlobalBundle();
-                })
-            }
-            
-            this.m_loadingBar.progress = 0;
-            this.m_lblProcess.string = `加载场景中 0%`;
+                });
 
-            const _resload: BaseLoader = new BaseLoader();
-            _resload.loadScene(
-                "app#scene",
-                (err: Error, asset: cc.Scene) => {
-                    if (!err && asset.scene) {
-                        cc.director.runSceneImmediate(
-                            asset.scene, 
-                            () => {}, 
-                            () => {
-                                //这里加载的是主场景资源，不用销毁，也不能销毁
-                                // _resload.releaseAll(); 
-                            }
-                        );
-                    }
-                },
-                (percent: number) => {
-                    this.m_loadingBar.progress = percent;
-                    this.m_lblProcess.string = `加载场景中 ${Math.floor(percent * 1000) / 10}%`
+                this.loadMainScene();
+            },
+            (percent) => {
+                this.m_loadingBar.progress = percent;
+                this.m_lblProcess.string =
+                    `加载bundle资源中 ${Math.floor(percent * 100)}%`;
+            },
+        );
+    }
+
+    private loadMainScene() {
+        this.m_loadingBar.progress = 0;
+        this.m_lblProcess.string = "加载场景中 0%";
+
+        const sceneLoader = new BaseLoader();
+        sceneLoader.loadScene(
+            "app#scene",
+            (err: Error | null, sceneAsset: cc.SceneAsset | null) => {
+                if (err || !sceneAsset?.scene) {
+                    cc.error("主场景加载失败", err);
+                    this.m_loadingBar.progress = 0;
+                    this.m_lblProcess.string = "场景加载失败，请重试";
+                    return;
                 }
-            )
-        })
+
+                cc.director.runSceneImmediate(
+                    sceneAsset.scene,
+                    () => {},
+                    () => {
+                        // 当前运行场景需要继续持有对应资源，不能在这里 releaseAll。
+                    },
+                );
+            },
+            (percent: number) => {
+                const progress = Math.max(0, Math.min(1, percent));
+                this.m_loadingBar.progress = progress;
+                this.m_lblProcess.string =
+                    `加载场景中 ${Math.floor(progress * 1000) / 10}%`;
+            },
+        );
     }
     initResourceSize() {
         let framesize = cc.screen.windowSize;
