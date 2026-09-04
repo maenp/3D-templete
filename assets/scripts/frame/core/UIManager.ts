@@ -3,8 +3,10 @@ import AdapterMgr, { AdapterType } from "./AdapterMgr";
 import ModalMgr from "./ModalMgr";
 import resload from "./ResLoader";
 import { FormType } from "./SysDefine";
-import type UIBase from "./UIBase";
+import UIBase from "./UIBase";
 import { UIWindow } from "./UIForm";
+
+
 
 export default class UIManager {
 	private _ndScreen: cc.Node = null;  // 全屏显示的UI 挂载结点
@@ -128,7 +130,7 @@ export default class UIManager {
 	private async _doLoadUIForm(prefabPath: string) {
 		let prefab = await resload.loadPrefabSync(prefabPath);
 		const node = cc.instantiate(prefab);
-		let com = node.getComponent('UIBase') as UIBase;
+		let com = node.getComponent(UIBase);
 		if (!com) {
 			cc.warn(`${prefabPath} 结点没有绑定UIBase`);
 			return null;
