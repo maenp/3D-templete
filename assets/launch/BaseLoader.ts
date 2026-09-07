@@ -150,7 +150,14 @@ export class BaseLoader{
         onComplete : LoadBundleArrayAssetCompleteFunc, 
         onProgress ?: LoadBundleAssetProcessFunc
     ){
-        const bundleNames = [...new Set(names)];
+        // 小游戏平台构建可能将 Set 展开编译为 concat，导致包名变成 Set 对象。
+        const bundleNames: string[] = [];
+        const seen = new Set<string>();
+        names.forEach((name) => {
+            if (seen.has(name)) return;
+            seen.add(name);
+            bundleNames.push(name);
+        });
 
         if (bundleNames.length === 0) {
             onProgress?.(1);
