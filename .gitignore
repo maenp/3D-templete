@@ -26,6 +26,5 @@ node_modules/
 documents/package/prod
 documents/package/test
 
-.fes/fep/prod
-.fes/fep/test
-.fes/fep/prepub-version.json
+
+.DS_Store
